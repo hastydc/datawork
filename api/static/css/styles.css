@@ -1,0 +1,89 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+header nav {
+  height: 50px;
+  width: 100vw;
+  background: #730000;
+  color: white; }
+  header nav span {
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    position: relative;
+    display: block; }
+
+#login .grid-x {
+  height: calc(100vh - 50px); }
+
+#result {
+  padding-bottom: 2em; }
+
+.separator {
+  height: 4px;
+  background: #730000;
+  margin-bottom: 20px; }
+
+h2, p {
+  text-align: left;
+  margin-bottom: 15px; }
+
+table {
+  border-left: 1px solid black;
+  border-right: 1px solid black; }
+  table thead {
+    background: #730000;
+    color: white; }
+  table td {
+    text-align: center;
+    border-bottom: 1px solid black; }
+    table td:last-of-type {
+      font-weight: bold; }
+    table td.p {
+      color: #730000; }
+
+p {
+  margin-bottom: 30px;
+  margin-top: 0px; }
+
+.fs {
+  border: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+  box-sizing: border-box; }
+  .fs label {
+    display: block;
+    font-size: 0.8em; }
+  .fs input, .fs select {
+    border: 0px;
+    border-bottom: 1px solid black;
+    width: 100%; }
+  .fs select {
+    cursor: pointer; }
+  .fs .error {
+    color: #730000;
+    font-size: 0.75em;
+    height: 15px;
+    display: block;
+    position: relative; }
+
+.btn {
+  border: 1px solid black;
+  outline: none;
+  border-radius: 0px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  background: rgba(115, 0, 0, 0);
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center; }
+  .btn:hover {
+    background: #730000;
+    letter-spacing: 2px;
+    color: white; }
+
+/*# sourceMappingURL=styles.css.map */

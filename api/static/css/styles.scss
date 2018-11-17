@@ -1,0 +1,124 @@
+$t: all .4s cubic-bezier(.22,.61,.36,1);
+$red: #730000;
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	nav {
+		height: 50px;
+		width: 100vw;
+		background: $red;
+		color: white;
+
+		span {
+			font-weight: bold;
+			letter-spacing: 2px;
+			padding: 15px 20px;
+			position: relative;
+			display: block;
+		}
+	}
+}
+
+#login {
+	.grid-x {
+		height: calc(100vh - 50px);
+	}
+}
+
+#result {
+	padding-bottom: 2em;
+}
+
+.separator {
+	height: 4px;
+	background: $red;
+	margin-bottom: 20px;
+}
+
+h2, p {
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+table {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+
+	thead {
+		background: $red;
+		color: white;
+	}
+
+	td {
+		text-align: center;
+		border-bottom: 1px solid black;
+
+		&:last-of-type {
+			font-weight: bold;
+		}
+
+		&.p {
+			color: $red;
+		}
+	}
+}
+
+p {
+	margin-bottom: 30px;
+	margin-top: 0px;
+}
+
+.fs {
+	border: 0px;
+	padding: 0px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+
+	label {
+		display: block;
+		font-size: 0.8em;
+	}
+
+	input, select {
+		border: 0px;
+		border-bottom: 1px solid black;
+		width: 100%;
+	}
+
+	select {
+		cursor: pointer;
+	}
+
+	.error {
+		color: $red;
+		font-size: 0.75em;
+		height: 15px;
+		display: block;
+		position: relative;
+	}
+}
+
+.btn {
+	border: 1px solid black;
+	outline: none;
+	border-radius: 0px;
+	padding: 10px;
+	font-weight: bold;
+	cursor: pointer;
+	color: black;
+	background: rgba($red, 0);
+	transition: $t;
+	text-decoration: none;
+	margin-top: 10px;
+	text-align: center;
+
+	&:hover {
+		background: rgba($red, 1);
+		letter-spacing: 2px;
+		color: white;
+	}
+}

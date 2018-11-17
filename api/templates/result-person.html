@@ -1,0 +1,170 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>Data Work!</title>
+		<link rel="stylesheet" href="{% sass_src 'css/styles.scss' %}">
+		<link rel="stylesheet" href="{% static 'css/foundation.min.css' %}">
+  </head>
+  <body>
+		<header>
+			<nav>
+				<span>Data Work!</span>
+			</nav>
+		</header>
+		<section id="result">
+			<div class="grid-container">
+				<div class="grid-x align-center-middle">
+					<h2 class="cell"> Results:</h2>
+					<div class="cell">
+						<div class="grid-x">
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<div class="cell">
+										<img src="data:image/png;base64,{{graph1}}">
+									</div>
+								</div>
+							</div>
+
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<p class="cell">
+									The following graph show the amount of offers in each city. </p>
+									<table class="cell" cellspacing="0" cellpadding="0">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>City</th>
+												<th>Offers</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>San Francisco</td>
+												<td>77</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Virginia</td>
+												<td>73</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>New York</td>
+												<td>72</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>Washington</td>
+												<td>60</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="cell separator"></div>
+
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<div class="cell">
+										<img src="data:image/png;base64,{{graph2}}">
+									</div>
+								</div>
+							</div>
+
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<p class="cell">
+									The following graph show the amount of offers in last 3 weeks and a prediction for next week. </p>
+									<table class="cell" cellspacing="0" cellpadding="0">
+										<thead>
+											<tr>
+												<th>Week</th>
+												<th>Offer Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>4 Week</td>
+												<td>175</td>
+											</tr>
+											<tr>
+												<td>3 Week</td>
+												<td>230</td>
+											</tr>
+											<tr>
+												<td>2 Week</td>
+												<td>235</td>
+											</tr>
+											<tr>
+												<td>Next Week</td>
+												<td class="p">234</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="cell separator"></div>
+
+							<div class="cell">
+								<div class="grid-x">
+									<h3 class="cell">Probability of being selected</h3>
+									<p class="cell">
+										This offer is the one with the highest probability of being hired
+									</p>
+									<p class="cell offer">
+										<b>Title:</b> Sr. Web Developer (Full-Stack/WP), Social Change Design Agency.<br/>
+										<b>Description: </b> Constructive, a leading brand experience design &amp; digital design agency that works exclusively with social impact organizations... </br>
+										<b>City: </b> New York.</br>
+									</p>
+									<table class="cell" cellspacing="0" cellpadding="0">
+										<thead>
+											<tr>
+												<th>Item</th>
+												<th>Max %</th>
+												<th>Current %</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Trade</td>
+												<td>10%</td>
+												<td>10%</td>
+											</tr>
+											<tr>
+												<td>Profession</td>
+												<td>10%</td>
+												<td>10%</td>
+											</tr>
+											<tr>
+												<td>City</td>
+												<td>10%</td>
+												<td>0%</td>
+											</tr>
+											<tr>
+												<td>Personal Skills</td>
+												<td>10%</td>
+												<td>5%</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2"><b>Probability</b></td>
+												<td>25%</td>
+											</tr>
+										</tfoot>
+									</table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+  </body>
+</html>

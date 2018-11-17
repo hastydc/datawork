@@ -1,0 +1,116 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>Data Work!</title>
+		<link rel="stylesheet" href="{% sass_src 'css/styles.scss' %}">
+		<link rel="stylesheet" href="{% static 'css/foundation.min.css' %}">
+  </head>
+  <body>
+		<header>
+			<nav>
+				<span>Data Work!</span>
+			</nav>
+		</header>
+		<section id="result">
+			<div class="grid-container">
+				<div class="grid-x align-center-middle">
+					<h2 class="cell"> Results:</h2>
+					<div class="cell">
+						<div class="grid-x">
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<div class="cell">
+										<img src="data:image/png;base64,{{graph1}}">
+									</div>
+								</div>
+							</div>
+
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<p class="cell">
+									The following graph show the amount of offers in each city. </p>
+									<table class="cell" cellspacing="0" cellpadding="0">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>City</th>
+												<th>Offers</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>San Francisco</td>
+												<td>77</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Virginia</td>
+												<td>73</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>New York</td>
+												<td>72</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>Washington</td>
+												<td>60</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="cell separator"></div>
+
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<div class="cell">
+										<img src="data:image/png;base64,{{graph2}}">
+									</div>
+								</div>
+							</div>
+
+							<div class="cell medium-6">
+								<div class="grid-x">
+									<p class="cell">
+									The following graph show the amount of offers in last 3 weeks and a prediction for next week. </p>
+									<table class="cell" cellspacing="0" cellpadding="0">
+										<thead>
+											<tr>
+												<th>Week</th>
+												<th>Offer Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>4 Week</td>
+												<td>175</td>
+											</tr>
+											<tr>
+												<td>3 Week</td>
+												<td>230</td>
+											</tr>
+											<tr>
+												<td>2 Week</td>
+												<td>235</td>
+											</tr>
+											<tr>
+												<td>Next Week</td>
+												<td class="p">234</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+  </body>
+</html>
