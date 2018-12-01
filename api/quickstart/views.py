@@ -47,7 +47,7 @@ def resultCompany(request):
         x_axis_label= 'City', 
 				x_range = x,
         y_axis_label= 'Offer amount', 
-        plot_width =400,
+        plot_width =950,
         plot_height =400)
 
     plot.line(x, y, legend= 'Amount', line_width = 2)
@@ -64,18 +64,32 @@ def resultCompany(request):
         x_axis_label= 'Week', 
 				x_range= x,
         y_axis_label= 'Offer amount', 
-        plot_width =400,
+        plot_width =950,
         plot_height =400)
 
     plot2.vbar(x,top=y, legend= 'Amount', width = 2)
     plot2.vbar(x, top=y2, legend= 'Amount', width = 2, line_color='red')
     script2, div2 = components(plot2)
 
+    x= ['Interno', 'Externo']
+    y= [2800,1600]
+
+    plot3 = figure(
+				title= title , 
+				x_range=x,
+        plot_width =400,
+        plot_height =400)
+
+    plot3.vbar(x,top=y, legend= 'Amount', width = 0.9)
+    script3, div3 = components(plot3)
+
+
 
     return render_to_response(
                'result-company.html',
                {'script1' : script , 'fig1' : div,
-               'script2' : script2 , 'fig2' : div2}
+               'script2' : script2 , 'fig2' : div2,
+               'script3' : script3 , 'fig3' : div3}
     )
 		
 def resultPerson(request):

@@ -1,9 +1,9 @@
 $t: all .4s cubic-bezier(.22,.61,.36,1);
-$red2: #bb0000;
+$red2: #730000;
 $red: #1F9245;
 $red: #6FB543;
 $gray: #f6f6f6;
-$bs: 0px 5px 10px #0000003d;
+$bs: 0px 0px 10px #0000003d;
 
 body {
 	margin: 0;
@@ -16,7 +16,6 @@ body {
 	background-attachment: fixed !important;
 	background-position: center bottom !important;
 	padding: 50px 0px 25px !important;
-	font-family: "Courier" !important;
 }
 
 header {
@@ -28,7 +27,6 @@ header {
 		position: fixed;
 		top: 0;
 		z-index: 999;
-		box-shadow: $bs;
 
 		span {
 			font-weight: bold;
@@ -56,8 +54,6 @@ section {
 
 #ms {
 	text-align: center;
-	border-bottom: 2px solid $red;
-	padding-bottom: 40px;
 
 	.cell {
 		transition: $t;
@@ -68,7 +64,7 @@ section {
 
 		span {
 			display: block;
-			width: 15%;
+			width: 50%;
 			height: 2px;
 			margin: 0 auto;
 			background: rgba($red, 0.5);
@@ -87,10 +83,6 @@ section {
 .grid-container {
 	position: relative;
 	background: white;
-
-	.grid-x {
-		position: relative;
-	}
 }
 
 .step {
@@ -106,34 +98,13 @@ section {
 		padding-top: 2em;
 		padding-bottom: 2em;
 		border: 2px solid rgba($red, 0.5);
-		box-shadow: $bs;
 	}
-}
-
-.middle {
-	height: 100%;
 }
 
 .separator {
 	height: 4px;
 	background: $red;
-	margin: 40px auto 10px !important;
-	width: 75% !important;
-}
-
-.separator-vertical {
-    width: 2px;
-    height: 50%;
-    position: absolute;
-    margin: auto !important;
-    left: 0;
-    right: 0;
-    top: 15%;
-    bottom: 0;
-		background: $red;
-}
-
-h2 {
+	margin-bottom: 20px;
 }
 
 h2, p {
@@ -142,19 +113,17 @@ h2, p {
 }
 
 table {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+
 	thead {
 		background: $red;
 		color: white;
-		
-		th {
-			padding: 5px 20px;
-			text-align: center;
-		}
 	}
 
 	td {
 		text-align: center;
-		border-bottom: 1px solid rgba($red, 0.3);
+		border-bottom: 1px solid black;
 
 		&:last-of-type {
 			font-weight: bold;
@@ -219,8 +188,6 @@ p {
 	margin-top: 10px;
 	text-align: center;
 	background: $gray;
-	box-shadow: $bs;
-	text-transform: uppercase;
 
 	&:hover {
 		background: rgba($red, 1);
