@@ -37,6 +37,15 @@ header {
 			position: relative;
 			display: block;
 		}
+		
+		img {
+			position: absolute;
+			margin: auto;
+		    top: 8px;
+			right: 35px;
+			width: 35px;
+			cursor: pointer;
+		}
 	}
 }
 

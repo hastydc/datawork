@@ -4,7 +4,7 @@ from quickstart import views
 
 urlpatterns = [
     #path('index/', views.index, name='login'),
-		path('', views.index, name='login'),
+		path('', views.login, name='login'),
 		path('login/', views.login, name='login'),
 		path('home-company/', views.homeCompany, name='homeCompany'),
 		path('home-person/', views.homePerson, name='homePerson'),

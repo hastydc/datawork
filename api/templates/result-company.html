@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-		<title>Data Work!</title>
+		<title>Data Job!</title>
     <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.9.0.min.css" type="text/css" />
     <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.css" rel="stylesheet" type="text/css">
     <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.css" rel="stylesheet" type="text/css">
@@ -13,21 +13,23 @@
   <body>
 		<header>
 			<nav>
-				<span>Data Work!</span>
+				<span>Data Job!</span>
+				<img src="{% static 'images/logout.png' %}">
 			</nav>
 		</header>
 
 		<section id="result">
 			<div class="grid-container">
 				<div id="ms" class="grid-x grid-margin-x align-center-middle">
-					<div class="cell small-6 step-btn step-active" data-step="1">GENERAL STATS<span></span></div>
-					<div class="cell small-6 step-btn" data-step="2">NEW YORK STATS!<span></span></div>
+					<div class="cell small-4 step-btn step-active" data-step="1">GENERAL DB<span></span></div>
+					<div class="cell small-4 step-btn" data-step="2">NEW YORK DB<span></span></div>
+					<div class="cell small-4 step-btn" data-step="3">DASHBOARD!<span></span></div>
 				</div>
 
 				<div class="grid-x align-center-middle step step-1 active">
 					<div class="cell">
 						<div class="grid-x grid-margin-y">
-							<h2 class="cell">Offers By City</h2>
+							<h2 class="cell">Ofertas por ciudad</h2>
 							<div class="cell">
 								<div class="grid-x">
 									<div class="cell">
@@ -41,39 +43,32 @@
 									<div class="cell medium-6 align-self-stretch">
 										<div class="grid-x middle align-middle">
 											<div class="cell">
-												The following graph show the amount of offers in each city.
+												La presente gráfica indica la cantidad de ciudades presentes en cada ciudad.
 											</div>
 										</div>
 									</div>
-									
-									<div class="separator-vertical"></div>
 
 									<table class="cell medium-6" cellspacing="0" cellpadding="0">
 										<thead>
 											<tr>
-												<th>#</th>
-												<th>City</th>
-												<th>Offers</th>
+												<th>Ciudad</th>
+												<th>Ofertas</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>1</td>
 												<td>San Francisco</td>
 												<td>77</td>
 											</tr>
 											<tr>
-												<td>2</td>
 												<td>Virginia</td>
 												<td>73</td>
 											</tr>
 											<tr>
-												<td>3</td>
 												<td>New York</td>
 												<td>72</td>
 											</tr>
 											<tr>
-												<td>4</td>
 												<td>Washington</td>
 												<td>60</td>
 											</tr>
@@ -89,124 +84,37 @@
 						</div>
 					
 						<div class="grid-x grid-margin-y">
-							<h2 class="cell">Offers By City</h2>
-							<div class="cell">
-								<div class="grid-x grid-margin-y">
-									<div class="cell">
-      							{{ fig2 | safe }}
-									</div>
-								</div>
-							</div>
+							<h2 class="cell">Ofertas por semana</h2>
 
 							<div class="cell">
 								<div class="grid-x grid-margin-x">
-									<div class="cell medium-6 align-self-stretch">
+									<div class="cell medium-4 align-self-stretch">
 										<div class="grid-x middle align-middle">
 											<div class="cell">
-												The following graph show the amount of offers in last 3 weeks and a prediction for next week. 
+												La siguiente gráfica presenta la cantidad de ofertas en las últimas semanas,
+												siendo la <b>semana 2</b> la que presento más ofertas con una cantidad de <b>235</b>
 											</div>
 										</div>
 									</div>
 
-									<div class="separator-vertical"></div>
-
-									<table class="cell medium-6" cellspacing="0" cellpadding="0">
-										<thead>
-											<tr>
-												<th>Week</th>
-												<th>Offer Amount</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>4 Week</td>
-												<td>175</td>
-											</tr>
-											<tr>
-												<td>3 Week</td>
-												<td>230</td>
-											</tr>
-											<tr>
-												<td>2 Week</td>
-												<td>235</td>
-											</tr>
-											<tr>
-												<td>Next Week</td>
-												<td class="p">234</td>
-											</tr>
-										</tbody>
-									</table>
+									<div class="cell medium-8" cellspacing="0" cellpadding="0">
+										aca va la grafica
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				
 				<div class="grid-x align-center-middle step step-2">
 					<div class="cell">
 						<div class="grid-x grid-margin-x">
 							<h2 class="cell">Empleos por agencia</h2>
-							<table class="cell medium-6" cellspacing="0" cellpadding="0">
-								<thead>
-									<tr>
-										<th>Agencia</th>
-										<th># Vacantes</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>DEPT OF HEALTH/MENTAL HYGIENE	</td>
-										<td>811	</td>
-									</tr>
-									<tr>
-										<td>DEPT OF ENVIRONMENT PROTECTION	</td>
-										<td>756</td>
-									</tr>
-									<tr>
-										<td>DEPARTMENT OF TRANSPORTATION	</td>
-										<td>178	</td>
-									</tr>
-									<tr>
-										<td>DEPT OF DESIGN & CONSTRUCTION	</td>
-										<td>155</td>
-									</tr>
-									<tr>
-										<td>LAW DEPARTMENT	</td>
-										<td>135</td>
-									</tr>
-									<tr>
-										<td>DEPT OF INFO TECH & TELECOMM	</td>
-										<td>131	</td>
-									</tr>
-									<tr>
-										<td>ADMIN FOR CHILDREN'S SVCS	</td>
-										<td>125</td>
-									</tr>
-									<tr>
-										<td>NYC HOUSING AUTHORITY	</td>
-										<td>110</td>
-									</tr>
-									<tr>
-										<td>DEPARTMENT OF INVESTIGATION	</td>
-										<td>95</td>
-									</tr>
-									<tr>
-										<td>DEPARTMENT OF BUSINESS SERV.	</td>
-										<td>81</td>
-									</tr>
-									<tr>
-										<td>...	</td>
-										<td>...	</td>
-									</tr>
-									<tr>
-										<td>BOROUGH PRESIDENT-QUEENS	</td>
-										<td>4</td>
-									</tr>
-								</tbody>
-							</table>	
+							<div class="cell medium-8" cellspacing="0" cellpadding="0">
+								aca va la grafica
+							</div>	
 
-							<div class="separator-vertical"></div>
-
-							<div class="cell medium-6">
+							<div class="cell medium-4">
 								Las agencias de contratación de la Ciudad de Nueva York que más vacantes 
 								publicaron fue el <b>departamento de salud mental e higiene con 811 vacantes</b>, 
 								seguido del <b>departamento de protección ambiental con 756 publicaciones.</b>
@@ -224,7 +132,7 @@
 
 						<div class="grid-x grid-margin-x">	
 							<h2 class="cell">Ofertas internas/externas</h2>	
-							<div class="cell medium-6 align-self-stretch">
+							<div class="cell medium-4 align-self-stretch">
 								<div class="grid-x middle align-middle">
 									<div class="cell">
 										A continuación la siguiente gráfica de barras para tipo de publicación,
@@ -235,11 +143,9 @@
 									</div>
 								</div>
 							</div>
-	
-							<div class="separator-vertical"></div>
 
-							<div class="cell medium-6">
-								{{ fig3 | safe }}
+							<div class="cell medium-8">
+								aca va la grafica
 							</div>
 
 							<div class="separator"></div>
@@ -247,46 +153,11 @@
 
 						<div class="grid-x grid-margin-x">	
 							<h2 class="cell">Empleos con mayor oferta</h2>	
-							<table class="cell medium-6" cellspacing="0" cellpadding="0">
-								<thead>
-									<tr>
-										<th>Cargo</th>
-										<th>Titulos</th>
-										<th>%</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>COMMUNITY COORDINATOR	</td>
-										<td>225</td>
-										<td>60.97%</td>
-									</tr>
-									<tr>
-										<td>COMMUNITY COORDINATOR	</td>
-										<td>225</td>
-										<td>60.97%</td>
-									</tr>
-									<tr>
-										<td>COMMUNITY COORDINATOR	</td>
-										<td>225</td>
-										<td>60.97%</td>
-									</tr>
-									<tr>
-										<td>COMMUNITY COORDINATOR	</td>
-										<td>225</td>
-										<td>60.97%</td>
-									</tr>
-									<tr>
-										<td>COMMUNITY COORDINATOR	</td>
-										<td>225</td>
-										<td>60.97%</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<div class="separator-vertical"></div>
+							<div class="cell medium-8" cellspacing="0" cellpadding="0">
+								aca va la grafica
+							</div>
 								
-							<div class="cell medium-6 align-self-stretch">
+							<div class="cell medium-4 align-self-stretch">
 								<div class="grid-x middle align-middle">
 									<div class="cell">
 										De la tabla anterior podemos observar que hay 
@@ -303,6 +174,10 @@
 							</div>	
 						</div>
 					</div>
+				</div>
+				
+				<div class="grid-x align-center-middle step step-3">
+					Dashboard!
 				</div>
 
 			</div>

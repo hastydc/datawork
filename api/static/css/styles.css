@@ -26,6 +26,13 @@ header nav {
     padding: 15px 20px;
     position: relative;
     display: block; }
+  header nav img {
+    position: absolute;
+    margin: auto;
+    top: 8px;
+    right: 35px;
+    width: 35px;
+    cursor: pointer; }
 
 section {
   padding: 2em 0em; }
